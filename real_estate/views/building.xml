@@ -99,11 +99,14 @@
                     <button name="action_done" string="mark as done" class="btn-primary" type="object" />
                 </header>
                 <field name="name" placeholder="Title"/>
-                <field name="responsible_id"/>
-                <field name="postcode"/>
+                <field name="responsible_id" optional="hide"/>
+                <field name="postcode" optional="hide"/>
                 <field name="date_availability"/>
                 <field name="expected_price"/>
                 <field name="selling_price"/>
+                <field name="bedrooms" optional="show"/>
+                <field name="facades" optional="hide"/>
+                <field name="garden" optional="hide"/>
             </tree>
         </field>
     </record>
@@ -135,21 +138,26 @@
         <field name="name">estate.property.form</field>
         <field name="model">test.model</field>
         <field name="arch" type="xml">
-                <form>
+                <form string="test">
                     <header>
 <!--                        <button name="action_test" string="test button" class="btn-primary" type="object" />-->
 <!--                        <button name="action_do_something" type="object" string="Do Something"/>-->
+                        <button name="action_new" string="New" class="btn-primary" states="cancelled" type="object"/>
                         <button name="action_received" string="Received" class="btn-primary" states="new" type="object"/>
                         <button name="action_accepted" string="Accepted" class="btn-primary" states="offer_received" type="object"/>
                         <button name="action_sold" string="Sold" class="btn-primary" states="offer_received,offer_accepted" type="object"/>
                         <button name="action_cancel" string="Cancel" class="btn-primary" states="new,offer_received,offer_accepted" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,offer_received,offer_accepted,sold"/>
                     </header>
                 <sheet>
+                    <div>
+                        <h1>
+                            <field name="reference" readonly="1"/>
+                        </h1>
+                    </div>
                     <group>
                         <group>
-                        <h1><field name="name"/></h1>
-                        </group>
-                        <group>
+                            <field name="name"/>
                             <field name="status" string="status"/>
                             <field name="tag_ids" widget="many2many_tags"/>
                             <field name="postcode"/>
@@ -198,6 +206,7 @@
             </form>
         </field>
     </record>
+
 
     <record id="building_action" model="ir.actions.act_window">
         <field name="name">Building</field>

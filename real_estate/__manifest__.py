@@ -7,7 +7,7 @@
 
     'website': 'https://www.cybrosys.com',
     'category': 'Productivity',
-    'depends': ['base','mail'],
+    'depends': ['base','mail','sale'],
     'license': 'AGPL-3',
     'data': [
     'security/ir.model.access.csv',
