@@ -98,6 +98,7 @@
                 <header>
                     <button name="action_done" string="mark as done" class="btn-primary" type="object" />
                 </header>
+                <field name="reference"/>
                 <field name="name" placeholder="Title"/>
                 <field name="responsible_id" optional="hide"/>
                 <field name="postcode" optional="hide"/>
@@ -144,6 +145,7 @@
 <!--                        <button name="action_do_something" type="object" string="Do Something"/>-->
                         <button name="action_new" string="New" class="btn-primary" states="cancelled" type="object"/>
                         <button name="action_received" string="Received" class="btn-primary" states="new" type="object"/>
+                        <button id="button_create_banglows" name="%(real_estate.action_banglows_create)d" string="create banglows" class="btn-primary" type="action"/>
                         <button name="action_accepted" string="Accepted" class="btn-primary" states="offer_received" type="object"/>
                         <button name="action_sold" string="Sold" class="btn-primary" states="offer_received,offer_accepted" type="object"/>
                         <button name="action_cancel" string="Cancel" class="btn-primary" states="new,offer_received,offer_accepted" type="object"/>
@@ -234,6 +236,12 @@
         parent="realeastate_building_root"
         action="building_action"
         sequence="10"/>
+
+    <menuitem id="create_building"
+        name="Create BHK"
+        parent="realeastate_building_root"
+        action="action_banglows_create"
+        sequence="20"/>
 
 
 </odoo>

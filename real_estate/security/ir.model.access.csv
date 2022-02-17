@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_test_model,access.test.model,model_test_model,,1,1,1,1
 access_estate_property_offer,access.estate.property.offer,model_estate_property_offer,,1,1,1,1
+access_create_banglows_wizard,access.create.banglows.wizard,model_create_banglows_wizard,,1,1,1,1
