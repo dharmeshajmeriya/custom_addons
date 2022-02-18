@@ -11,4 +11,14 @@
         <field name="binding_type">report</field>
     </record>
 
+    <record id="report_property_xls" model="ir.actions.report">
+        <field name="name">Property Card excel</field>
+        <field name="model">test.model</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">real_estate.report_property_id_card_xls</field>
+        <field name="report_file">real_estate.report_property_id_card_xls</field>
+        <field name="binding_model_id" ref="model_test_model"/>
+        <field name="binding_type">report</field>
+    </record>
+
 </odoo>

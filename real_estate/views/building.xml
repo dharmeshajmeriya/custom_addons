@@ -148,6 +148,7 @@
                         <button id="button_create_banglows" name="%(real_estate.action_banglows_create)d" string="create banglows" class="btn-primary" type="action"/>
                         <button name="action_accepted" string="Accepted" class="btn-primary" states="offer_received" type="object"/>
                         <button name="action_sold" string="Sold" class="btn-primary" states="offer_received,offer_accepted" type="object"/>
+                        <button name="action_url" string="Open url" class="btn-primary" type="object"/>
                         <button name="action_cancel" string="Cancel" class="btn-primary" states="new,offer_received,offer_accepted" type="object"/>
                         <field name="state" widget="statusbar" statusbar_visible="new,offer_received,offer_accepted,sold"/>
                     </header>

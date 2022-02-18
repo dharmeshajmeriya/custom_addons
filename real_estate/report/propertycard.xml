@@ -20,6 +20,12 @@
                                                     <span t-field="o.name"/>
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td>expected price : </td>
+                                                <td>
+                                                    <span t-field="o.expected_price"/>
+                                                </td>
+                                            </tr>
                                         </table>
                                     </td>
                                 </tr>

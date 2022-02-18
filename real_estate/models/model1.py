@@ -138,7 +138,12 @@ class TestModel(models.Model):
             result.append((rec.id, name))
         return result
 
-
+    def action_url(self):
+        return{
+            'type': 'ir.actions.act_url',
+            'target': 'new',
+            'url': 'https://www.odoo.com/',
+        }
 
 
 

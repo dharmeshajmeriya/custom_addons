@@ -1,0 +1,1 @@
+from . import property_card_xls
